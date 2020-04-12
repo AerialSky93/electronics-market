@@ -5,7 +5,7 @@ import { InputTextboxComponent } from './utilities/input-textbox/input-textbox.c
 
 const routes: Routes = [
   {
-      path: '/textbox',
+      path: 'textbox',
       component: InputTextboxComponent,
   }
 ];
