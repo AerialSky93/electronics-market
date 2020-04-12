@@ -8,7 +8,7 @@ export class CustomFieldErrorMatcher implements ErrorStateMatcher {
 
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
     return this.customControl && this.customControl.touched && (this.customControl.invalid || this.errors);
-  }
+  } 
 }
 
 @Component({
