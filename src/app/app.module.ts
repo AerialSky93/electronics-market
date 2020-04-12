@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InputTextboxComponent } from './utilities/input-textbox/input-textbox.component';
 import { TestComponent } from './utilities/test/test.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatRippleModule, MatLineModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,13 @@ import { TestComponent } from './utilities/test/test.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatRippleModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
