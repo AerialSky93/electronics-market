@@ -8,12 +8,14 @@ import { TestComponent } from './utilities/test/test.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddressFormComponent } from './address-form/address-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InputTextboxComponent,
-    TestComponent
+    TestComponent,
+    AddressFormComponent
   ],
   imports: [
     BrowserModule,

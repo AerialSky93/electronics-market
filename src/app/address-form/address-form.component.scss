@@ -1,0 +1,171 @@
+
+.address-form-group{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width:100%;
+  }
+  
+  .address-form{
+    width:100%;
+  }
+  
+  fieldset{
+    padding-left:0px !important;
+  }
+  
+  .address-container {
+    display:flex;
+    align-items: flex-start;
+    flex-direction:column;
+    background-color: white;
+    width:100%;
+  }
+  
+  .address-container * {
+    padding-left: 7px ; 
+    padding-right: 7px ; 
+    box-sizing: border-box;
+  }
+  
+  .app-input-textbox{
+    min-width:2px;
+  }
+  
+  .row{
+    display:flex;
+    flex-direction:row;
+    justify-content: flex-start;
+    width:100%;
+  }
+  
+  .subRow {
+    margin-left: 0px !important;
+    padding-left: 0px !important;
+  }
+  
+  .empty {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .empty{
+    display:flex;
+    flex-direction:row;
+  }
+  
+  
+  // First row
+  
+  .mailstopcode{
+    width:150px;
+  }
+  
+  .incareof{
+    width:300px;
+  }
+  
+  .attentionline{
+    width:200px;
+  }
+  
+  
+  // Second row
+  
+  .streetnumber{
+    width:150px;
+  }
+  
+  .fractional{
+    width:150px;
+  }
+  
+  .predirectional{
+    width:150px;
+  }
+  
+  .emptyrowtwo{
+    width:245px;
+  }
+  
+  
+  // Third row
+  
+  .streetname{
+    width:300px;
+  }
+  
+  .streettype{
+    width:150px;
+  }
+  
+  .postdirectional{
+    width:150px;
+  }
+  
+  // Fourth row
+  
+  .unittype{
+    width:150px;
+  }
+  
+  .unitnumber{
+    width:150px;
+  }
+  
+  .pmb{
+    width:150px;
+  }
+  
+  .emptyrowthree{
+    flex-basis:40%;
+  }
+  
+  
+  // Fifth row
+    
+  .city{
+    width:300px;
+  }
+  
+  .state{
+    width:125px;
+  } 
+  
+  .postalcode{
+    width:150px;
+  }
+  
+  .postalcodeextension{
+    width:85px;
+  }
+  
+  .error-city-state-postalcode{
+    margin-top:14px;
+    margin-bottom:9px;
+    padding-left:3px;
+    align-items:center;
+    color:red;
+    font-size:17px;
+  }
+  
+  
+  .error-city-state-postalcode{
+    margin-top:14px;
+    margin-bottom:9px;
+    padding-left:3px;
+    align-items:center;
+    color:red;
+    font-size:17px;
+  }
+  
+  
+  .no-error-city-state-postalcode{
+    margin-top:14px;
+    margin-bottom:14px;
+    padding-left:3px;
+    align-items:center;
+    color:red;
+    font-size:17px;
+  }
+  

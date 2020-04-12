@@ -1,0 +1,71 @@
+<div class="address-form-group">
+    <form class="address-form" [formGroup]="editAddressForm">
+        <div class="address-container">
+                <legend></legend>
+                <div class="row">
+                    <app-input-textbox [MaxLength]="50" [Label]="'Mailstop Code'" [PlaceHolder]="'Mailstop Code'"
+                        formControlName="mailStopCode" class="mailstopcode"></app-input-textbox>
+                    <app-input-textbox [MaxLength]="46" [Label]="'In Care Of'" [PlaceHolder]="'In Care Of'" formControlName="inCareOf"
+                        class="incareof"></app-input-textbox>
+                    <app-input-textbox [MaxLength]="45" [Label]="'Attention Line'" [PlaceHolder]="'Attention Line'"
+                        formControlName="attentionLine" class="attentionline"></app-input-textbox>
+                </div>
+
+                <div class="row">
+                    <app-input-textbox [MaxLength]="8" [Label]="'Street Number'" [PlaceHolder]="'Street Number'"
+                        formControlName="streetNumber" class="streetnumber"></app-input-textbox>
+                    <app-input-textbox [MaxLength]="3" [Label]="'Fractional'" [PlaceHolder]="'Fractional'" formControlName="fractional"
+                        class="fractional">
+                    </app-input-textbox>
+                    <app-input-textbox [MaxLength]="2" [Label]="'Pre-Directional'" [PlaceHolder]="'Pre-Directional'"
+                        formControlName="predirectional" class="predirectional"></app-input-textbox>
+                    <span class="emptyrowtwo"></span>
+                </div>
+
+                <div class="row">
+                    <app-input-textbox [MaxLength]="30" [Label]="'Street Name'" [PlaceHolder]="'Street Name'" [Hint]="'Required'"
+                        formControlName="streetName" class="streetname"></app-input-textbox>
+                    <app-input-textbox [MaxLength]="4" [Label]="'Street Type'" [PlaceHolder]="'Street Type'"
+                        formControlName="streetType" class="streettype"></app-input-textbox>
+                    <app-input-textbox [MaxLength]="2" [Label]="'Post-Directional'" [PlaceHolder]="'Post-Directional'"
+                        formControlName="postdirectional" class="postdirectional"></app-input-textbox>
+                </div>
+
+                <div class="row">
+                    <app-input-textbox [MaxLength]="4" [Label]="'Unit Type'" [PlaceHolder]="'Unit Type'" formControlName="unitType"
+                        class="unittype"></app-input-textbox>
+                    <app-input-textbox [MaxLength]="8" [Label]="'Unit No.'" [PlaceHolder]="'Unit No.'" formControlName="unitNumber"
+                        class="unitnumber"></app-input-textbox>
+                    <app-input-textbox [MaxLength]="8" [Label]="'PMB'" [PlaceHolder]="'PMB'" formControlName="privateMailBoxNumber"
+                        class="pmb"></app-input-textbox>
+                    <span class="emptyrowthree"></span>
+                </div>
+
+                <div class="row">
+                    <app-input-textbox [MaxLength]="32" [Label]="'City'" [PlaceHolder]="'City'" [Hint]="'Required'"
+                        formControlName="city" class="city"></app-input-textbox>
+                    <app-input-textbox [MaxLength]="2" [Label]="'State'" [PlaceHolder]="'State'" [Hint]="'Required'"
+                        formControlName="state" class="state"> </app-input-textbox>
+                    <app-input-textbox [MaxLength]="5" [Label]="'Zip Code'" [PlaceHolder]="'Zip Code'" [Hint]="'Required'"
+                        formControlName="postalCode" class="postalcode">
+                    </app-input-textbox>
+                    <app-input-textbox [MaxLength]="4" [Label]="'Zip + 4'" [PlaceHolder]="'Zip + 4'"
+                        formControlName="postalCodeExtension" class="postalcodeextension"></app-input-textbox>
+                </div>
+
+                <ng-container *ngIf="isAtLeastOneLocationRequired">
+                    <div class="row error-city-state-postalcode">
+                        <div [@enterAnimation] class="material-icons">error_outline</div>
+                        <div class="location-required" [@enterAnimation]> {{atLeastOneLocationRequiredMessage}} </div>
+                    </div>
+                </ng-container>
+
+
+                <ng-container *ngIf="!isAtLeastOneLocationRequired">
+                    <div class="row no-error-city-state-postalcode">
+                        <div>&nbsp;</div>
+                    </div>
+                </ng-container>
+        </div>
+    </form>
+</div>
