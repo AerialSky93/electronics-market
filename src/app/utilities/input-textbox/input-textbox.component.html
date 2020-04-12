@@ -1,0 +1,23 @@
+<div class="input-wrap">
+    <mat-form-field appearance = "{{Appearance}}">
+        <mat-label>{{Label}}</mat-label>   
+        <input 
+            matInput 
+            [attr.maxlength] = "MaxLength"
+            [value]="Value ? Value : ''"
+            [placeholder]="PlaceHolder ? PlaceHolder : ''"
+            [readonly]="ReadOnly"
+            [ngClass]="NgClass"
+            [type]="type ? type: 'text'"
+            [ngModel]="Value" 
+            [errorStateMatcher]="errorMatcher()"
+            [disabled]="Disabled"
+            (input)="onChange($event.target.value)"
+            (blur)="onBlur($event)"
+            (change)="saveValueAction($event)"
+            (ngModelChange)="Value=$event"
+        >
+        <mat-hint>{{Hint}}</mat-hint>
+        <mat-error *ngIf="control && control.invalid">{{ErrorMessage}}</mat-error>
+    </mat-form-field>
+</div>
